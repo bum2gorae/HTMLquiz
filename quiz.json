@@ -1,0 +1,17 @@
+[
+  {
+    "question": "자바스크립트에서 '==='의 의미는?",
+    "options": ["값만 비교", "값과 타입 모두 비교"],
+    "answer": 1
+  },
+  {
+    "question": "HTML의 기본 구조에 들어가지 않는 것은?",
+    "options": ["<head>", "<style>", "<body>", "<main>", "<div>"],
+    "answer": 1
+  },
+  {
+    "question": "CSS 단위 중 실제 존재하지 않는 것은?",
+    "options": ["px", "rem", "em", "pt", "pxt"],
+    "answer": 4
+  }
+]

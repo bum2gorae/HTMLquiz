@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈 앱</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- 모달 팝업 -->
+  <div id="quiz-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <div class="form-header">
+        <h2>퀴즈 추가</h2>
+      </div>
+      <form id="quiz-form">
+        <div class="form-group">
+          <label for="new-question">문제 내용</label>
+          <textarea id="new-question" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="new-option1">보기 1</label>
+          <input type="text" id="new-option1" required />
+        </div>
+        <div class="form-group">
+          <label for="new-option2">보기 2</label>
+          <input type="text" id="new-option2" required />
+        </div>
+        <div class="form-group">
+          <label for="new-option3">보기 3</label>
+          <input type="text" id="new-option3" />
+        </div>
+        <div class="form-group">
+          <label for="new-option4">보기 4</label>
+          <input type="text" id="new-option4" />
+        </div>
+        <div class="form-group">
+          <label for="new-option5">보기 5</label>
+          <input type="text" id="new-option5" />
+        </div>
+        <div class="form-group">
+          <label for="new-answer">정답 번호 (1~5)</label>
+          <input type="number" id="new-answer" min="1" max="5" required />
+        </div>
+        <div class="form-footer">
+          <button type="submit">퀴즈 추가</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <body>
+    <h1>퀴즈 앱</h1>
+
+    <div class="button-group">
+      <input type="file" id="json-input" accept=".json" />
+      <button id="load-quiz">퀴즈 시작</button>
+      <button id="check-answer">정답 확인</button>
+      <span id="score"></span>
+      <button id="reset-quiz">다시 풀기</button>
+      <button id="open-modal">퀴즈 추가</button>
+      <button id="download-json">다운로드</button>
+    </div>
+
+    <div id="quiz-container"></div>
+
+    <!-- PapaParse CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
